@@ -1,0 +1,5 @@
+name: test
+version: '1.0'
+main: dev.m7wq.test.Plugin
+api-version: '1.18'
+authors: [ m7wq ]
