@@ -1,13 +1,21 @@
 package dev.m7wq;
 
-/**
- * Hello world!
- *
- */
+
+import dev.m7wq.utils.StorageHelper;
+import lombok.Getter;
+
+import java.io.File;
+
+
 public class MapAPI
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+
+
+
+    public static void load(File path){
+
+        StorageHelper.setPath(path);
     }
+
 }
