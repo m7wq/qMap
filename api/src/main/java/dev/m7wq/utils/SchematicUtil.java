@@ -7,7 +7,7 @@ import org.bukkit.block.Block;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SchematicUtils {
+public class SchematicUtil {
 
     public static List<BlockText> fromBlocksToString(List<Block> blocks, Location pos1){
 

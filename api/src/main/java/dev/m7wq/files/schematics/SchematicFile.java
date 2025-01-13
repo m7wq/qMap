@@ -4,8 +4,7 @@ package dev.m7wq.files.schematics;
 import dev.m7wq.entity.BlockText;
 import dev.m7wq.file.SimpleFile;
 import dev.m7wq.main.IDataBased;
-import dev.m7wq.utils.SchematicUtils;
-import lombok.SneakyThrows;
+import dev.m7wq.utils.SchematicUtil;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 
@@ -41,7 +40,7 @@ public class SchematicFile extends SimpleFile implements IDataBased {
 
     public void setBlocks(List<Block> blocks, Location pos1){
 
-        List<BlockText> blocksToString = SchematicUtils.fromBlocksToString(blocks,pos1);
+        List<BlockText> blocksToString = SchematicUtil.fromBlocksToString(blocks,pos1);
 
         blocks.clear();
         clear();

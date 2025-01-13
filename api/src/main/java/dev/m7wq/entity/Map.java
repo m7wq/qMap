@@ -3,25 +3,30 @@ package dev.m7wq.entity;
 import dev.m7wq.cuboid.Cuboid;
 import dev.m7wq.files.schematics.SchematicFile;
 import dev.m7wq.map.Distance;
-import dev.m7wq.map.IMap;
+import dev.mqzen.boards.base.BoardAdapter;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import org.bukkit.scoreboard.Scoreboard;
 
-import java.io.File;
+import java.util.Collection;
 import java.util.List;
 
 @AllArgsConstructor
-public class Map implements IMap {
+@Getter@Setter
+public class Map {
 
+
+    public BoardAdapter scoreboard;
+    public Collection<Player> playersOnTab;
+    public String name;
     protected SchematicFile file;
     protected Cuboid cuboid;
 
-    @Override
-    public void pasteMap(Location positionOne) {
+
+
+    public void paste(Location positionOne) {
 
         List<BlockText> blocks = file.getBlocks();
 
@@ -39,18 +44,12 @@ public class Map implements IMap {
 
     }
 
-    @Override
+    public void rotate(Location position){}
+
+
     public void duplicateWithDistance(Distance distance) {
 
     }
 
-    @Override
-    public void setScoreboard(Scoreboard scoreboard) {
 
-    }
-
-    @Override
-    public void setPlayersOnTab(List<Player> players) {
-
-    }
 }
